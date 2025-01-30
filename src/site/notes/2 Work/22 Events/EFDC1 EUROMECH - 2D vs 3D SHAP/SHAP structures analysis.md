@@ -16,10 +16,12 @@ In order to try to have insights on which H should be used for the segmentation 
 
 | ID          | H value | description                                                          |
 | ----------- | :-----: | -------------------------------------------------------------------- |
-| Hperc2D     |  0.56   |                                                                      |
-| Hperc3D     |  1.62   | value that maximizes $N/N_{tot}$ for the 3D database                 |
-| Hopt2D      |  2.16   | global H value that minimizes the error between the 2Dvs3D databases |
-| localHopt2D |   NA    | local H value that minimizes the 2Dvs3D error for the given field    |
+| Hperc2D     |  0.56   | Value that maximizes $N/N_{tot}$ for the 2D database                 |
+| Hperc3D     |  1.62   | Value that maximizes $N/N_{tot}$ for the 3D database                 |
+| Hopt2D      |  2.16   | Global H value that minimizes the error between the 2Dvs3D databases |
+| localHopt2D |   NA    | Local H value that minimizes the 2Dvs3D error for the given field    |
+
 Where the formula used to minimize the error between the 2D and the 3D segmentation is:
 $$error = \frac{1}{N_t N_z V_T} \sum_{t}\sum_{z}\sum_{j}\sum_{i} \left| M_{ij}^{3D} - M_{ij}^{2D} \right| \cdot V_{ij}$$
 being $M_{ij}^{3D}$ the boolean array resulting of applying the threshold $\sqrt{\phi_u^2(x,y)+\phi_v^2(x,y)} \geq H \cdot \sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$.
+## Beyond H, the rest of the threshold
