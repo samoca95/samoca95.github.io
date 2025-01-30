@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/5-mo-c/home-to-digital-garden/","tags":["Fleeting","gardenEntry","gardenEntry"]}
+{"dg-publish":true,"permalink":"/5-mo-c/home-to-digital-garden/","tags":["Fleeting","gardenEntry","gardenEntry","gardenEntry"]}
 ---
 
 Welcome. This is my personal vault to share ideas and information with others.
