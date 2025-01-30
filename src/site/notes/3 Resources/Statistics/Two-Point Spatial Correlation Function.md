@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/3-resources/statistics/two-point-spatial-correlation-function/"}
+{"dg-publish":true,"dg-path":"ResourcesStatistics/Two-Point Spatial Correlation Function.md","permalink":"/resources-statistics/two-point-spatial-correlation-function/"}
 ---
 
 Two-point spatial correlation of two variables (also called two-point cross-correlation) is a procedure usually applied to investigate the spatial relation between two variables, respectively, at two spatial points in a turbulence field. Two-point cross-correlation coefficient of two variables $\phi_i$ and $\psi_i$ is defined for two locations as:

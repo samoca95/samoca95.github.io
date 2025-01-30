@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/2-work/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/"}
+{"dg-publish":true,"dg-path":"PhD notes22 Events/EFDC1 EUROMECH - 2D vs 3D SHAP/SHAP structures analysis.md","permalink":"/ph-d-notes22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/"}
 ---
 
 ## The percolation issue:
