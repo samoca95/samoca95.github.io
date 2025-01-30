@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/7-fleeting/my-notes/","tags":["Fleeting","gardenEntry","gardenEntry","gardenEntry"]}
+{"dg-publish":true,"permalink":"/7-fleeting/my-notes/","tags":["Fleeting","gardenEntry","gardenEntry"]}
 ---
 
-Home for all my notes to be shared.
+Home for all my notes to be shared wit others.
