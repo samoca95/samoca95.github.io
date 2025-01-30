@@ -1,7 +1,7 @@
 [
 {
 		"title": "SHAP structures analysis",
-		"date":"Thu Jan 30 2025 17:53:33 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 17:53:34 GMT+0000 (Coordinated Universal Time)",
 		"url":"/ph-d-notes/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/",
 		"content": "The percolation issue:\nIf we compare the percolation curves of the 2D and the 3D SHAP values, we obtain:\n\nWe see two main reasons for the shift towards lower values of H in the 2D case:\n\nThe relative area of a structure in 2D does not correspond directly to its relative volume in 3D. Structures aligned with the Z plane may appear large in 2D (high V/Vtot) but be much smaller in 3D if their transversal dimension is small, leading to fictitional 2D V/Vtot values.\nA single 3D structure with a transversal dimension can have multiple &quot;lobes&quot; intersecting the same z-plane at different locations. In a 2D cut, there is no way to determine whether these separate areas belong to the same 3D structure or different ones. Lower H values result in larger structures and potentially more lobes intersecting the plane, artificially increasing the number of structures per field in 2D. This shifts the 2D N/N_tot curve to the left, as we observed.\n\nBecause of this, our preliminary conclusion is that the 2D percolation curve does not provide much useful information regarding the optimal H value to be used.\nLooking for the optimal H in 2D\nIn order to try to have insights on which H should be used for the segmentation of the 2D domain, several alternatives have been tried:\n\nID\nH value\ndescription\n\nHperc2D\n0.56\nValue that maximizes N/Ntot for the 2D database\n\nHperc3D\n1.62\nValue that maximizes N/Ntot for the 3D database\n\nHopt2D\n2.16\nGlobal H value that minimizes the error between the 2Dvs3D databases\n\nlocalHopt2D\nNA\nLocal H value that minimizes the 2Dvs3D error for the given field\n\nWhere the formula used to minimize the error between the 2D and the 3D segmentation is:\nerror=1NtNzVT∑t∑z∑j∑i|Mij3D−Mij2D|⋅Vijbeing Mij3D the boolean array resulting of applying the threshold ϕu2(x,y)+ϕv2(x,y)≥H⋅ϕu2―(y)+ϕv2―(y).\nBeyond H, the rest of the threshold",
 		"tags": [ "note"]
@@ -9,7 +9,7 @@
 
 {
 		"title": "Two-Point Spatial Correlation Function",
-		"date":"Thu Jan 30 2025 17:53:33 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 17:53:34 GMT+0000 (Coordinated Universal Time)",
 		"url":"/resources/statistics/two-point-spatial-correlation-function/",
 		"content": "Two-point spatial correlation of two variables (also called two-point cross-correlation) is a procedure usually applied to investigate the spatial relation between two variables, respectively, at two spatial points in a turbulence field. Two-point cross-correlation coefficient of two variables ϕi and ψi is defined for two locations as:\nRij(xr,x)=⟨ϕi(xr)ψj(x)⟩⟨ϕi2(xr)⟩⟨ψj2(x)⟩where the subscription r denotes the reference point; ϕ and ψ are fluctuations of two variables or components, e.g. velocity, vorticity, temperature, pressure, shear stress. Here, the numbered indices, i and j (i,j=1,2,3), respectively indicate the streamwise (x-direction), wall normal (y-direction) and spanwise (z-direction) directions, and ⟨⋅⟩ denotes an ensemble average of realizations.",
 		"tags": [ "note"]
@@ -17,7 +17,7 @@
 
 {
 		"title": "Home to Digital Garden",
-		"date":"Thu Jan 30 2025 17:53:33 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 17:53:34 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
 		"content": "Welcome. This is my personal vault to share ideas and information with others.\nIndex of notes:\n\nFile\nLast Modified\nDate Created\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/ph-d-notes/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/\">SHAP structures analysis</a>\n6:41 PM - 2025_01_30\n2025_01_30\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/\">Home to Digital Garden</a>\n5:09 PM - 2025_01_30\n2025_01_30\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/resources/statistics/two-point-spatial-correlation-function/\">Two-Point Spatial Correlation Function</a>\n4:28 PM - 2025_01_30\n2025_01_14",
 		"tags": [ "note","Fleeting","gardenEntry"]
