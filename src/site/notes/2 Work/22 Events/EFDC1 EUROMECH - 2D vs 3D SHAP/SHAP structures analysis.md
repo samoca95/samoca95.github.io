@@ -11,10 +11,11 @@ We see two main reasons for the shift towards lower values of H in the 2D case:
 - A single 3D structure with a transversal dimension can have multiple "lobes" intersecting the same z-plane at different locations. In a 2D cut, there is no way to determine whether these separate areas belong to the same 3D structure or different ones. Lower H values result in larger structures and potentially more lobes intersecting the plane, artificially increasing the number of structures per field in 2D. This shifts the 2D N/N_tot curve to the left, as we observed.
 
 Because of this, our preliminary conclusion is that the 2D percolation curve does not provide much useful information regarding the optimal H value to be used.
+
 ## Looking for the optimal H in 2D
 In order to try to have insights on which H should be used for the segmentation of the 2D domain, several alternatives have been tried:
 
-| ID          | H value | description                                                          |
+| ID          | H value | Description                                                          |
 | ----------- | :-----: | -------------------------------------------------------------------- |
 | Hperc2D     |  0.56   | Value that maximizes $N/N_{tot}$ for the 2D database                 |
 | Hperc3D     |  1.62   | Value that maximizes $N/N_{tot}$ for the 3D database                 |
@@ -24,4 +25,11 @@ In order to try to have insights on which H should be used for the segmentation 
 Where the formula used to minimize the error between the 2D and the 3D segmentation is:
 $$error = \frac{1}{N_t N_z V_T} \sum_{t}\sum_{z}\sum_{j}\sum_{i} \left| M_{ij}^{3D} - M_{ij}^{2D} \right| \cdot V_{ij}$$
 being $M_{ij}^{3D}$ the boolean array resulting of applying the threshold $\sqrt{\phi_u^2(x,y)+\phi_v^2(x,y)} \geq H \cdot \sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$.
+
+The results for the segmentation are the following:
+![SHAP structures analysis-attachment-2.png|800](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-2.png)
+
+And these are the resulting PDFs:
+![SHAP structures analysis-attachment-3.png|700](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-3.png)
+
 ## Beyond H, the rest of the threshold
