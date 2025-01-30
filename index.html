@@ -14,7 +14,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
 <script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
-<link href="/styles/style.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.15395bb5.css" rel="stylesheet">
 <link href="/styles/custom-style.css" rel="stylesheet">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -29,7 +30,7 @@
 <div class="navbar-inner">
 <span style="font-size:1.5rem;margin-right:10px" @click="showFilesMobile=!showFilesMobile"><i icon-name="menu"></i></span>
 <a href="/" style="text-decoration:none">
-<h1 style="margin:15px!important">Digital Garden</h1>
+<h1 style="margin:15px!important">SMC notes</h1>
 </a>
 </div>
 </nav>
@@ -37,7 +38,7 @@
 <div x-show="showFilesMobile && !isDesktop" @click="showFilesMobile = false" style="display:none" class="fullpage-overlay"></div>
 <nav class="filetree-sidebar" x-show.important="isDesktop || showFilesMobile" style="display:none">
 <a href="/" style="text-decoration:none">
-<h1 style="text-align:center">Digital Garden</h1>
+<h1 style="text-align:center">SMC notes</h1>
 </a>
 <div class="folder" x-data="{isOpen: true}">
 <div x-show="isOpen" style="display:none" class="">

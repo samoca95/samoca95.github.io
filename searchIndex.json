@@ -1,7 +1,7 @@
 [
 {
 		"title": "Two-Point Spatial Correlation Function",
-		"date":"Thu Jan 30 2025 14:56:15 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 15:00:08 GMT+0000 (Coordinated Universal Time)",
 		"url":"/3-resources/statistics/two-point-spatial-correlation-function/",
 		"content": "Two-point spatial correlation of two variables (also called two-point cross-correlation) is a procedure usually applied to investigate the spatial relation between two variables, respectively, at two spatial points in a turbulence field. Two-point cross-correlation coefficient of two variables ϕi and ψi is defined for two locations as:\nRij(xr,x)=⟨ϕi(xr)ψj(x)⟩⟨ϕi2(xr)⟩⟨ψj2(x)⟩where the subscription r denotes the reference point; ϕ and ψ are fluctuations of two variables or components, e.g. velocity, vorticity, temperature, pressure, shear stress. Here, the numbered indices, i and j (i,j=1,2,3), respectively indicate the streamwise (x-direction), wall normal (y-direction) and spanwise (z-direction) directions, and ⟨⋅⟩ denotes an ensemble average of realizations.",
 		"tags": [ "note"]
@@ -9,7 +9,7 @@
 
 {
 		"title": "My notes",
-		"date":"Thu Jan 30 2025 14:56:15 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 15:00:08 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
 		"content": "Home for all my notes.",
 		"tags": [ "note","Fleeting","gardenEntry"]
