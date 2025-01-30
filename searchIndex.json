@@ -1,7 +1,7 @@
 [
 {
 		"title": "SHAP structures analysis",
-		"date":"Thu Jan 30 2025 16:30:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 16:55:16 GMT+0000 (Coordinated Universal Time)",
 		"url":"/2-work/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/",
 		"content": "The percolation issue:\nIf we compare the percolation curves of the 2D and the 3D SHAP values, we obtain:\n\nWe see two main reasons for the shift towards lower values of H in the 2D case:\n\nThe relative area of a structure in 2D does not correspond directly to its relative volume in 3D. Structures aligned with the Z plane may appear large in 2D (high V/Vtot) but be much smaller in 3D if their transversal dimension is small, leading to fictitional 2D V/Vtot values.\nA single 3D structure with a transversal dimension can have multiple &quot;lobes&quot; intersecting the same z-plane at different locations. In a 2D cut, there is no way to determine whether these separate areas belong to the same 3D structure or different ones. Lower H values result in larger structures and potentially more lobes intersecting the plane, artificially increasing the number of structures per field in 2D. This shifts the 2D N/N_tot curve to the left, as we observed.\n\nBecause of this, our preliminary conclusion is that the 2D percolation curve does not provide much useful information regarding the optimal H value to be used.",
 		"tags": [ "note"]
@@ -9,23 +9,15 @@
 
 {
 		"title": "Two-Point Spatial Correlation Function",
-		"date":"Thu Jan 30 2025 16:30:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 16:55:16 GMT+0000 (Coordinated Universal Time)",
 		"url":"/3-resources/statistics/two-point-spatial-correlation-function/",
 		"content": "Two-point spatial correlation of two variables (also called two-point cross-correlation) is a procedure usually applied to investigate the spatial relation between two variables, respectively, at two spatial points in a turbulence field. Two-point cross-correlation coefficient of two variables ϕi and ψi is defined for two locations as:\nRij(xr,x)=⟨ϕi(xr)ψj(x)⟩⟨ϕi2(xr)⟩⟨ψj2(x)⟩where the subscription r denotes the reference point; ϕ and ψ are fluctuations of two variables or components, e.g. velocity, vorticity, temperature, pressure, shear stress. Here, the numbered indices, i and j (i,j=1,2,3), respectively indicate the streamwise (x-direction), wall normal (y-direction) and spanwise (z-direction) directions, and ⟨⋅⟩ denotes an ensemble average of realizations.",
 		"tags": [ "note"]
 },
 
 {
-		"title": "Markdown syntax sandbox",
-		"date":"Thu Jan 30 2025 16:30:40 GMT+0000 (Coordinated Universal Time)",
-		"url":"/4-notes/markdown-syntax-sandbox/",
-		"content": "Heading level 1\nHeading level 2\nHeading level 3\nHeading level 4\nHeading level 5\nHeading level 6\nBasic syntax highlighting:\nBold text\nItalic text\nItalic and bold text\nHighlighted text\nHighlighted bold and italic\ninline code\nCode block\n\ninlinemath\nmathblock\n[!QUOTE] Quote with callout\n\nQuote with &gt;\n\nImages:\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\nCallouts:\n\n[!note]\n\n[!info] Info, Todo\n\n[!abstract] Abstract, Summary, Tldr\n\n[!tip] Tip, Hint, Important\n\n[!success] Success, Check, Done\n\n[!question] Question, Help, FAQ\n\n[!warning] Warning, Caution, Attention\n\n[!failure] Failure, Fail, Missing\n\n[!danger] Danger, Error\n\n[!bug]\n\n[!example]\n\n[!quote] Quote, Cite\n\nCode blocks:\nInline import numpy as n\n# Variables and basic data types\ninteger = 10\nfloating_point = 3.14\nstring = &quot;Hello, World!&quot;\nboolean = True\nnone_type = None\n\n# Lists, tuples, sets, and dictionaries\nmy_list = [1, 2, 3, 4]\nmy_tuple = (5, 6, 7, 8)\nmy_set = {9, 10, 11}\nmy_dict = {&quot;a&quot;: 1, &quot;b&quot;: 2}\n\n# Control flow: if-else, loops\nfor i in range(5):\nif i % 2 == 0:\nprint(f&quot;{i} is even&quot;)\nelse:\nprint(f&quot;{i} is odd&quot;)\n\n# While loop\ncount = 0\nwhile count &lt; 3:\nprint(f&quot;Count is {count}&quot;)\ncount += 1\n\n# Functions, arguments, and return values\ndef add(a, b):\nreturn a + b\n\nresult = add(5, 10)\n\n# Lambda functions\nsquare = lambda x: x ** 2\nprint(square(5))\n\n# List comprehensions\nsquares = [x ** 2 for x in range(10)]\n\n# Exception handling\ntry:\ndivision = 10 / 0\nexcept ZeroDivisionError as e:\nprint(f&quot;Error: {e}&quot;)\nfinally:\nprint(&quot;Finished exception handling.&quot;)\n\n# Classes and inheritance\nclass Animal:\ndef __init__(self, name):\nself.name = name\n\ndef speak(self):\nreturn f&quot;{self.name} makes a sound.&quot;\n\nclass Dog(Animal):\ndef speak(self):\nreturn f&quot;{self.name} barks.&quot;\n\ndog = Dog(&quot;Rex&quot;)\nprint(dog.speak())\n\n# Decorators\ndef decorator(func):\ndef wrapper():\nprint(&quot;Before function call&quot;)\nfunc()\nprint(&quot;After function call&quot;)\nreturn wrapper\n\n@decorator\ndef say_hello():\nprint(&quot;Hello!&quot;)\n\nsay_hello()\n\n# File I/O\nwith open(&quot;test_file.txt&quot;, &quot;w&quot;) as file:\nfile.write(&quot;This is a test.&quot;)\n\n# Imports\nimport math\nprint(math.sqrt(16))\n\n# F-strings\nname = 'Python'\nversion = 3.9\nprint(f&quot;Welcome to {name} {version}!&quot;)",
-		"tags": [ "note"]
-},
-
-{
 		"title": "Home to Digital Garden",
-		"date":"Thu Jan 30 2025 16:30:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Thu Jan 30 2025 16:55:16 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
 		"content": "Welcome. This is my personal vault to share ideas and information with others.\nIndex of notes:\n\nFile\nLast Modified\nDate Created\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/2-work/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/\">SHAP structures analysis</a>\n5:30 PM - 2025_01_30\n2025_01_30\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/\">Home to Digital Garden</a>\n5:09 PM - 2025_01_30\n2025_01_30\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/3-resources/statistics/two-point-spatial-correlation-function/\">Two-Point Spatial Correlation Function</a>\n4:28 PM - 2025_01_30\n2025_01_14",
 		"tags": [ "note","Fleeting","gardenEntry"]
