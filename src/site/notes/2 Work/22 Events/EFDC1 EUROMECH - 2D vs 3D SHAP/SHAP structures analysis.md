@@ -10,7 +10,7 @@ We see two main reasons for the shift towards lower values of H in the 2D case:
 - The relative area of a structure in 2D does not correspond directly to its relative volume in 3D. Structures aligned with the Z plane may appear large in 2D (high $V/V_{tot}$) but be much smaller in 3D if their transversal dimension is small, leading to fictitional 2D $V/V_{tot}$ values.
 - A single 3D structure with a transversal dimension can have multiple "lobes" intersecting the same z-plane at different locations. In a 2D cut, there is no way to determine whether these separate areas belong to the same 3D structure or different ones. Lower H values result in larger structures and potentially more lobes intersecting the plane, artificially increasing the number of structures per field in 2D. This shifts the 2D N/N_tot curve to the left, as we observed.
 
-Because of this, our preliminary conclusion is that the 2D percolation curve does not provide much useful information regarding the optimal H value to be used.
+> [!info] Because of this, our preliminary conclusion is that the 2D percolation curve does not provide much useful information regarding the optimal H value to be used.
 
 ## Looking for the optimal H in 2D
 In order to try to have insights on which H should be used for the segmentation of the 2D domain, several alternatives have been tried:
@@ -33,3 +33,18 @@ And these are the resulting PDFs:
 ![SHAP structures analysis-attachment-3.png|700](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-3.png)
 
 ## Beyond H, the rest of the threshold
+If we take a look to the threshold condition, there is the term on the box:
+$$\sqrt{\phi_u^2(x,y)+\phi_v^2(x,y)} \geq H \cdot \boxed{\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}}$$
+Comparing it for the 2D and 3D case we can see a big difference in its evolution up to $y^+\approx 15$:
+![SHAP structures analysis-attachment-4.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-4.png)
+> [!important] This difference translates into a much larger threshold for the 2D case for the same value of H for $y^+<15$. Thus introducing a bias during segmentation.
+
+To verify this, I have run a test case where 3D curve was used for the segmentation of the 2D case. Here are the results:
+![SHAP structures analysis-attachment-5.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-5.png)
+As we can see, the legs up to $y^+=15$ are broader when we use the 3D threshold evolution, this already implies a higher amount of structures being captured in that region. Moreover, it is important to note that the PDF is adimensionalized with the maximum bin of the histograms conforming it (thus max = 1). Therefore, if the numbers of structures being captured below $y^+$ 15 has substantially increased compared to the higher regions of the domain, the larger bin is now larger, making the number of structures in the $u^+>0, y^+>15$ region insignificant to be represented in the plot (note that the minimum color is not 0).
+
+> [!faq] Question:
+> Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$? Is it **noise** due to the lower amount of data? Or could it be fundamental to the 2D case?
+
+
+
