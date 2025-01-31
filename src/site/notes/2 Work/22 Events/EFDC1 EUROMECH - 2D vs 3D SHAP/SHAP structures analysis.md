@@ -9,7 +9,7 @@ Two main factors contribute to the shift toward lower H values in the 2D case:
 - **Dimensional Discrepancy:** In 2D, the relative area of a structure does not directly correspond to its relative volume in 3D. For example, structures aligned with the Z plane may appear large in 2D (i.e., high $V/V_{tot}$) but can be much smaller in 3D if their transversal dimension is limited. This mismatch leads to artificially inflated 2D $V/V_{tot}$ values. 
 - **Ambiguity in Structure Identification:** A single 3D structure with a transversal extent can intersect a given z-plane at multiple, spatially separated "lobes." In a 2D slice, it is impossible to determine whether these separate areas belong to the same 3D structure or to different ones. At lower H values, where structures are larger, more lobes may intersect the plane. This increases the apparent number of structures in 2D, shifting the 2D N/N_tot curve to the left. 
 
-> [!info] **Note:** 
+> [!info] Note: 
 > As a result, our preliminary conclusion is that the 2D percolation curve does not provide useful guidance for determining the optimal H value.
 
 ---
@@ -81,12 +81,12 @@ Note that apart from including the $w$ component, the code remains unchanged bet
 ---
 ## 5. Open Questions 
 Several questions remain: 
-> [!faq] **Questions to be Answered:** 
-> 1. **Physical Explanation:** 
+> [!faq] Questions to be Answered: 
+> 1. Physical Explanation: 
 >     Does this behavior have a physical basis? Is it reasonable to observe these results in the 2D case? 
 >     
-> 1. **SHAP Implementation:**
+> 2. SHAP Implementation:
 >     Could the issue be related to the SHAP implementation? Are we overlooking something when adapting it to 2D? 
 >     
-> 1. **Code Integrity:**
+> 3. Code Integrity:
 >     Is there a potential bug in the code that could be causing these discrepancies?
