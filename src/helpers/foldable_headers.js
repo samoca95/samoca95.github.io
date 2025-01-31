@@ -13,9 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
             while (content && content.tagName !== 'H1' && content.tagName !== 'H2' && content.tagName !== 'H3' && content.tagName !== 'H4' && content.tagName !== 'H5' && content.tagName !== 'H6') {
                 if (content.style.display === 'none') {
                     content.style.display = 'block';
+                    this.classList.remove('collapsed'); // Remove collapsed class
                     arrow.innerHTML = '⯆'; // Arrow points down when unfolded
                 } else {
                     content.style.display = 'none';
+                    this.classList.add('collapsed'); // Add collapsed class
                     arrow.innerHTML = '⯈'; // Arrow points right when folded
                 }
                 content = content.nextElementSibling;
