@@ -4,7 +4,6 @@
   margin-left: 20px; /* Space between header text and arrow */
   font-size: 0.8em;
   cursor: pointer;
-  color: moccasin;
   display: none; /* Hide arrow by default */
 }
 
