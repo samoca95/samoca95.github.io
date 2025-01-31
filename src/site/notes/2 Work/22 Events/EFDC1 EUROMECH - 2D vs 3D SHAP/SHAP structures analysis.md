@@ -80,7 +80,7 @@ Note that apart from including the $w$ component, the code remains unchanged bet
 
 ---
 ## 5. Open Questions 
-Several questions remain to be addressed: 
+Several questions remain: 
 > [!faq] **Questions to be Answered:** 
 > 1. **Physical Explanation:** 
 >     Does this behavior have a physical basis? Is it reasonable to observe these results in the 2D case? 
