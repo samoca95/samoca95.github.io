@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (hasContent) {
       const arrow = document.createElement('span');
       arrow.className = 'arrow';
-      arrow.innerHTML = '⊛'; // Arrow points right when collapsed
+      arrow.innerHTML = '  ⊛'; // Arrow points right when collapsed
       header.appendChild(arrow); // Add arrow after the header text
 
       header.addEventListener('click', function() {
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Toggle arrow state
         this.classList.toggle('collapsed');
-        arrow.innerHTML = isCollapsed ? '⊛' : ''; // Hide arrow when expanded
+        arrow.innerHTML = isCollapsed ? '  ⊛' : ''; // Hide arrow when expanded
       });
     }
   });
