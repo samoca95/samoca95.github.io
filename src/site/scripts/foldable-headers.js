@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (hasContent) {
       const arrow = document.createElement('span');
       arrow.className = 'arrow';
-      arrow.innerHTML = '⯈';
-      header.prepend(arrow);
+      arrow.innerHTML = '⊛'; // Arrow points right when collapsed
+      header.appendChild(arrow); // Add arrow after the header text
 
       header.addEventListener('click', function() {
         let content = this.nextElementSibling;
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Toggle content
         while (content && !content.matches('h1, h2, h3, h4, h5, h6')) {
           if (content.textContent.trim() !== '') {
-            content.classList.toggle('foldable-content', !isCollapsed);
             content.style.display = isCollapsed ? 'block' : 'none';
           }
           content = content.nextElementSibling;
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Toggle arrow state
         this.classList.toggle('collapsed');
-        arrow.innerHTML = isCollapsed ? '⯆' : '⯈';
+        arrow.innerHTML = isCollapsed ? '⊛' : ''; // Hide arrow when expanded
       });
     }
   });
