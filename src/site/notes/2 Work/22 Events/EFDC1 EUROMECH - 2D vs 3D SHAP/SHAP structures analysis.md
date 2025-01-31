@@ -2,7 +2,7 @@
 {"dg-publish":true,"dg-path":"PhD notes/22 Events/EFDC1 EUROMECH - 2D vs 3D SHAP/SHAP structures analysis.md","permalink":"/ph-d-notes/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/"}
 ---
 
-## The percolation issue:
+## The percolation issue
 If we compare the percolation curves of the 2D and the 3D SHAP values, we obtain:
 ![SHAP structures analysis-attachment-1.png|700](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-1.png)
 *Caption: comparison of the percolation curve of the 3D case (left) and the 2D case (right)*
@@ -61,4 +61,4 @@ Comparing $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ for the 2D and 
 This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ is fictional though, it represents something statistically captured by the SHAP values, and an individual analysis shows that $\overline{\phi_u^2}(y)$ is the one introducing such discrepancies (see figure below). So the question to be made is: Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$?
 
 ## Identifying the problem
-hee helloo qgqin
+hee helloo qgqinsfv
