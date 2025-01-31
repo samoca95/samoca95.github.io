@@ -2,7 +2,7 @@
 {"dg-publish":true,"dg-path":"PhD notes/22 Events/EFDC1 EUROMECH - 2D vs 3D SHAP/SHAP structures analysis.md","permalink":"/ph-d-notes/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/"}
 ---
 
-## The percolation issue
+## 1. The percolation issue
 If we compare the percolation curves of the 2D and the 3D SHAP values, we obtain:
 ![SHAP structures analysis-attachment-1.png|700](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-1.png)
 *Caption: comparison of the percolation curve of the 3D case (left) and the 2D case (right)*
@@ -13,7 +13,7 @@ We see two main reasons for the shift towards lower values of H in the 2D case:
 
 > [!info] Because of this, our preliminary conclusion is that the 2D percolation curve does not provide much useful information regarding the optimal H value to be used.
 
-## Looking for the optimal H in 2D
+## 2. Looking for the optimal H in 2D
 In order to try to have insights on which H should be used for the segmentation of the 2D domain, several alternatives have been tried:
 
 | ID          | H value | Description                                                          |
@@ -37,7 +37,7 @@ And these are the resulting PDFs:
 
 As we can see, optimizing the H does not seem to make them look closer. So we need to look further. Let's take a look to statistics.
 
-## Beyond H, the rest of the threshold
+## 3. Beyond H, the rest of the threshold
 The threshold condition is the product between H (constant) and the y-dependent term on the box:
 $$\sqrt{\phi_u^2(x,y)+\phi_v^2(x,y)} \geq H \cdot \boxed{\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}}$$
 Comparing $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ for the 2D and 3D case we can see a big difference in its evolution up to $y^+\approx 15$:
@@ -60,5 +60,4 @@ Comparing $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ for the 2D and 
 
 This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ is fictional though, it represents something statistically captured by the SHAP values, and an individual analysis shows that $\overline{\phi_u^2}(y)$ is the one introducing such discrepancies (see figure below). So the question to be made is: Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$?
 
-## Identifying the problem
-hee helloo qgqinsfvrfvbe
+## 4. Identifying the problem
