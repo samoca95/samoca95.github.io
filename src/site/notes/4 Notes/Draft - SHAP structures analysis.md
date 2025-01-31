@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"PhD notes/22 Events/EFDC1 EUROMECH - 2D vs 3D SHAP/SHAP structures analysis.md","permalink":"/ph-d-notes/22-events/efdc-1-euromech-2-d-vs-3-d-shap/shap-structures-analysis/"}
+{"dg-publish":true,"permalink":"/4-notes/draft-shap-structures-analysis/"}
 ---
 
 ## The percolation issue:
@@ -35,29 +35,32 @@ And these are the resulting PDFs:
 ![SHAP structures analysis-attachment-3.png|700](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-3.png)
 *Caption: PDFs obtained with the different H values. The 2D results are shown at the left, 3D results at the right.*
 
-As we can see, optimizing the H does not seem to make them look closer. So we need to look further. Let's take a look to statistics.
-
 ## Beyond H, the rest of the threshold
-The threshold condition is the product between H (constant) and the y-dependent term on the box:
+If we take a look to the threshold condition, there is the term on the box:
 $$\sqrt{\phi_u^2(x,y)+\phi_v^2(x,y)} \geq H \cdot \boxed{\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}}$$
-Comparing $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ for the 2D and 3D case we can see a big difference in its evolution up to $y^+\approx 15$:
+Comparing it for the 2D and 3D case we can see a big difference in its evolution up to $y^+\approx 15$:
 ![SHAP structures analysis-attachment-4.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-4.png)
-*Caption: evolution of the y-dependent threshold condition for the 2D case (purple), 3D case with only horizontal and vertical velocity (blue), and 3D case with all velocity components (green). The results are non-dimensionalized with the value at the mid-channel for comparison.*
+*Caption: evolution of the y-dependent threshold condition for the 2D case (purple), 3D case with only horizontal and vertical velocity (blue), and 3D case with all velocity components (green).*
 
-> [!important] Observation:
-> This difference translates into a much larger threshold for the 2D case for the same value of H for $y^+<15$. Thus introducing a bias during segmentation.
+> [!important] This difference translates into a much larger threshold for the 2D case for the same value of H for $y^+<15$. Thus introducing a bias during segmentation.
 
-> [!Example] Verification
-> To verify this, I have run a test case where 3D curve was used for the segmentation of the 2D case. Here are the results:
-> ![SHAP structures analysis-attachment-5.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-5.png) 
-> *Caption: PDF of the 2D SHAP values using the $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ factor obtained from the 2D data (left) and from the 3D data (right). Note that both of them are for the 2D case, just the y-dependent threshold has been adjusted.*
-> - The legs up to $y^+=15$ are broader when we use the 3D threshold evolution, this already demonstrates a higher amount of structures being captured in that region. 
-> - Additionally, it is important to note that the PDF is adimensionalized with the maximum bin of the histograms conforming it (thus max = 1). Therefore, if the numbers of structures being captured below $y^+$ 15 has substantially increased compared to the higher regions of the domain, the larger bin is now larger, making the number of structures in the $u^+>0, y^+>15$ region insignificant to be represented in the plot (note that the minimum color is not 0).
-> 
-> This theory is easily proved reducing the minimal value of the colormap range:
-> ![SHAP structures analysis-attachment-6.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-6.png)
-> *Caption: same as last figure but with reduced minimum for the colormap range.*
+To verify this, I have run a test case where 3D curve was used for the segmentation of the 2D case. Here are the results:
+![SHAP structures analysis-attachment-5.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-5.png) 
+*Caption: PDF of the 2D SHAP values using the $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ factor obtained from the 2D data (left) and from the 3D data (right). Note that both of them are for the 2D case, just the y-dependent threshold has been adjusted.*
 
-This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ is fictional though, it represents something statistically captured by the SHAP values, and an individual analysis shows that $\overline{\phi_u^2}(y)$ is the one introducing such discrepancies (see figure below). So the question to be made is: Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$?
+- The legs up to $y^+=15$ are broader when we use the 3D threshold evolution, this already demonstrates a higher amount of structures being captured in that region. 
+- Additionally, it is important to note that the PDF is adimensionalized with the maximum bin of the histograms conforming it (thus max = 1). Therefore, if the numbers of structures being captured below $y^+$ 15 has substantially increased compared to the higher regions of the domain, the larger bin is now larger, making the number of structures in the $u^+>0, y^+>15$ region insignificant to be represented in the plot (note that the minimum color is not 0).
+  This theory is easily proved reducing the minimal value of the colormap range:
+![SHAP structures analysis-attachment-6.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-6.png)
+*Caption: same as last figure but with reduced minimum for the colormap range.*
 
-## The issue with SHAP rms
+This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ is fictional though, it represents something statistically captured by the SHAP values, an individual analysis shows that $\overline{\phi_u^2}(y)$ is the one introducing such discrepancies. So the question to be made is: Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$? Is it noise due to the lower amount of data? Or could it be fundamental to the 2D case?
+
+> [!QUESTION] Why do we have way more structures being captured for $y^+<15$?
+> The increase in captured structures might be due to the topology of those structures. Could they be more tridimensional than for higher positions? This would justify an increase on the number of fictional 2D structures being identified. The PDF of the w component of the 3D SHAP values shows that it is most relevant close to the wall:
+> ![SHAP structures analysis-attachment-7.png|300](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-7.png)
+> *Caption: PDF of the transversal velocity component of the SHAP values obtained from the 3D database.*
+
+
+
+
