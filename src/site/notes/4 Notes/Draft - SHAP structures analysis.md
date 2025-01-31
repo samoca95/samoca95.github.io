@@ -61,6 +61,7 @@ This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2
 > ![SHAP structures analysis-attachment-7.png|300](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-7.png)
 > *Caption: PDF of the transversal velocity component of the SHAP values obtained from the 3D database.*
 
-
+## Checking the coincidence with Q events
+![Draft - SHAP structures analysis-attachment-1.png](/img/user/9%20Operational/91%20Assets/Draft%20-%20SHAP%20structures%20analysis-attachment-1.png)
 
 
