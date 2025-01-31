@@ -1,0 +1,11 @@
+/* src/site/styles/user/foldable-headers.css */
+.arrow {
+  margin-right: 8px;
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.collapsed .arrow {
+  transform: rotate(-90deg);
+}
