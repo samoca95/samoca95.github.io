@@ -49,10 +49,14 @@ To verify this, I have run a test case where 3D curve was used for the segmentat
 ![SHAP structures analysis-attachment-6.png|500](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-6.png)
 *Caption: same as last figure but with reduced minimum for the colormap range.*
 
-This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ is fictional though, it represents something statistically captured by the SHAP values, an individual analysis shows that $\overline{\phi_u^2}(y)$ is the one introducing such discrepancies. So the question to be made is: 
+This modification of the factor $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$ is fictional though, it represents something statistically captured by the SHAP values, an individual analysis shows that $\overline{\phi_u^2}(y)$ is the one introducing such discrepancies. So the question to be made is: Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$? Is it noise due to the lower amount of data? Or could it be fundamental to the 2D case?
 
-> [!faq] Question:
-> Why are we having such difference in the evolution of $\sqrt{\overline{\phi_u^2}(y)+\overline{\phi_v^2}(y)}$? Is it **noise** due to the lower amount of data? Or could it be fundamental to the 2D case?
+
+> [!QUESTION] Why do we have way more structures being captured for $y^+<15$?
+> The increase in captured structures might be due to the topology of those structures. Could they be more tridimensional than for higher positions? This would justify an increase on the number of fictional 2D structures being identified. The PDF of the w component of the 3D SHAP values shows that it is most relevant at these heights:
+> ![SHAP structures analysis-attachment-7.png|300](/img/user/9%20Operational/91%20Assets/SHAP%20structures%20analysis-attachment-7.png)
+> *Caption: PDF of the transversal velocity component of the SHAP values obtained from the 3D database.*
+
 
 
 
