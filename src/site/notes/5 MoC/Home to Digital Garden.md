@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Home to Digital Garden.md","permalink":"/home-to-digital-garden/","tags":["Fleeting","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry"]}
+{"dg-publish":true,"dg-path":"Home to Digital Garden.md","permalink":"/home-to-digital-garden/","tags":["Fleeting","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry"]}
 ---
 
 Welcome. This is my personal vault to share ideas and information with others.
