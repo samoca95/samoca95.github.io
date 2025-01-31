@@ -1,33 +1,13 @@
 /* src/site/styles/user/foldable-headers.css */
 /* Style for the arrow */
 .arrow {
-  position: absolute; /* Position the arrow absolutely */
-  left: -20px; /* Move the arrow to the left of the header */
+  margin-left: 20px; /* Space between header text and arrow */
   font-size: 0.8em;
-  transition: transform 0.2s ease;
   cursor: pointer;
+  display: none; /* Hide arrow by default */
 }
 
-/* Ensure headers are positioned relative for absolute arrow placement */
-h1, h2, h3, h4, h5, h6 {
-  position: relative; /* Make headers a positioning context for the arrow */
-  padding-left: 20px; /* Add padding to prevent text from overlapping the arrow */
-}
-
+/* Show arrow only when the section is collapsed */
 .collapsed .arrow {
-  transform: rotate(-90deg);
+  display: inline-block; /* Show arrow when collapsed */
 }
-
-/* Smooth transition for foldable content */
-.foldable-content {
-  overflow: hidden;
-  max-height: 1000px; /* Adjust based on your content */
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  opacity: 1;
-}
-
-.collapsed + .foldable-content {
-  max-height: 0;
-  opacity: 0;
-}
-
