@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Toggle arrow state
         this.classList.toggle('collapsed');
-        arrow.innerHTML = isCollapsed ? '  ⊛' : ''; // Hide arrow when expanded
+        arrow.innerHTML = isCollapsed ? '' : ''; // Hide arrow when expanded
       });
     }
   });
